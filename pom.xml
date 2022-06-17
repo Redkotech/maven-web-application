@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<version>0.0.4</version>
 	
-	<name>tesla-web-app</name>
+	<name>ebay-web-app</name>
 
 	<description>Maven Web Project for Java Project</description>
 
@@ -109,7 +109,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>tesla-app</finalName>
+		<finalName>ebay-app</finalName>
 		
 		<plugins>
 			<plugin>
