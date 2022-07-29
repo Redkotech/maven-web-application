@@ -1,0 +1,34 @@
+pipeline{
+    agent {
+        label 'jenkins-agent2'
+    }
+    tools {
+        maven 'mymaven'
+    }
+    triggers{
+        pollSCM('* * * * *')
+    }
+    stages{
+        stage('Cloning') {
+            steps {
+                sh 'echo cloning code from master branch'
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'e4557ddc-e537-48d4-960e-b0b3274c1bec', url: 'https://github.com/Redkotech/maven-web-application.git']]])
+            }
+        }
+        stage('buildcode'){
+            steps {
+                sh 'echo the project has started building'
+                sh 'mvn clean package'
+            }
+        }
+        stage('CodeQualityReport') {
+            steps{
+                sh 'echo checking the code quality report with sonarQube'
+                sh 'mvn sonar:sonar'
+            }
+        }
+        stage('uploadartifact') {
+            steps
+        }
+    }
+}
