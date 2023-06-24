@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome To Rediko Technologies Inc.</h1>
-<h1 align="center">We are developing and supporting quality  Software Solutions to millions of clients.
+<h1 align="center">We are developing and supporting quality  Software Solutions to millions of clients in all nations.
 	We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance.</h1>
 <hr>
 <br>
