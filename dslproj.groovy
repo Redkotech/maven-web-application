@@ -14,7 +14,7 @@ job('mvn-project') {
     maven('clean package', 'maven-standalone-application/pom.xml')
   }
   publishers {
-    archiveArtifacts('**/*.jar')
+    archiveArtifacts('**/*.war')
     archiveJunit('**/target/surefire-reports/TEST-*.xml')
   }
 
