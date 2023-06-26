@@ -5,7 +5,7 @@ mavenJob('mvn-DSLProject') {
   mavenInstallation('Maven 3.9.2')
 
   scm {
-    git('https://github.com/Redkotech/maven-standalone-application.git', 'master')
+    git('https://github.com/Redkotech/maven-web-application.git', 'master')
   }
 
   triggers {
