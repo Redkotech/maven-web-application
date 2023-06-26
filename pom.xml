@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>maven-web-application</artifactId>
+	<artifactId>ebay-web-app</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.4-SNAPSHOT</version>
 	
@@ -129,7 +129,7 @@
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/maven-web-application</contextPath>
+						<contextPath>/ebay-web-app</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
