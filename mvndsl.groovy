@@ -15,7 +15,7 @@ mavenJob('mvn-DSLProject') {
   goals('clean package')
   
   publishers {
-    archiveArtifacts('**/*.jar')
+    archiveArtifacts('**/*.war')
     archiveJunit('**/target/surefire-reports/TEST-*.xml')
   }
 
