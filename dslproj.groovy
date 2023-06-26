@@ -3,7 +3,7 @@ job('mvn-project') {
   description('Builds and deploys a Maven project')
 
   scm {
-    git('https://github.com/Redkotech/maven-standalone-application.git', 'master')
+    git('https://github.com/Redkotech/maven-web-application.git', 'master')
   }
 
   triggers {
