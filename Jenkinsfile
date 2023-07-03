@@ -34,9 +34,9 @@ pipeline {
                 echo 'deploying app to tomcat'
                 sh 'pwd'
                 sh 'ls -la'
-                sh 'docker build -t dox2410/webapp:$env.BUILD_ID .'
-                sh 'docker push dox2410/webapp:$env.BUILD_ID'
-                sh 'docker run -it -d -name web-app -p 8081:8080 dox2410/webapp:$env.BUILD_ID'
+                sh 'docker build -t dox2410/webapp:$BUILD_ID .'
+                sh 'docker push dox2410/webapp:$BUILD_ID'
+                sh 'docker run -it -d -name web-app -p 8081:8080 dox2410/webapp:$BUILD_ID'
                  //build job: 'deploy-copy-war'
             }
         }
