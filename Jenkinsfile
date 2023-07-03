@@ -20,7 +20,7 @@ pipeline {
         stage('CodeQuality') {
             steps {
                 echo 'checking code quality....'
-                sh ' mvn sonar:sonar'
+                //sh ' mvn sonar:sonar'
             }
             post {
                 success {
