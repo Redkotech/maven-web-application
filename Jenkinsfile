@@ -35,8 +35,8 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh "docker build -t dox2410/webapp:${env.BUILD_ID} ."
-                sh "docker login -u dox2410 --password-stdin Doxa@2419"
-                sh "docker push dox2410/webapp:${env.BUILD_ID}"
+               // sh "docker login -u dox2410 --password-stdin Doxa@2419"
+                sh "docker -u dox2410 --password-stdin push dox2410/webapp:${env.BUILD_ID}"
                 sh "docker run -it -d -name web-app -p 8081:8080 dox2410/webapp:${env.BUILD_ID}"
                  //build job: 'deploy-copy-war'
             }
