@@ -17,9 +17,10 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Deploy') {
+        stage('CodeQuality') {
             steps {
-                echo 'Deploying....'
+                echo 'checking code quality....'
+                sh ' mvn sonar:sonar'
             }
             post {
                 success {
@@ -28,9 +29,15 @@ pipeline {
                 }
             }
         }
-        stage('staging') {
+        stage('Deploying') {
             steps {
-                 build job: 'deploy-copy-war'
+                echo 'deploying app to tomcat'
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'docker build -t dox2410/webapp:${env.BUILD_ID .}
+                sh 'docker push dox2410/webapp:${env.BUILD_ID'
+                sh 'docker run -it -d --name web-app -p 8081:8080 dox2410/webapp:${env.BUILD_ID'
+                 //build job: 'deploy-copy-war'
             }
         }
     }
