@@ -36,7 +36,7 @@ pipeline {
                 sh 'ls -la'
                 sh "docker build -t dox2410/webapp:${env.BUILD_ID} ."
                // sh "docker push dox2410/webapp:${env.BUILD_ID}"
-                sh "docker run -it -d --name web-app -p 8093:8080 dox2410/webapp:${env.BUILD_ID}"
+                sh "docker run -it -d --name web-app1 -p 8093:8080 dox2410/webapp:${env.BUILD_ID}"
                  //build job: 'deploy-copy-war'
             }
         }
